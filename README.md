@@ -1,5 +1,5 @@
 
 # Festival de música final
 
-Página web dinámica de un festival de musica.
+Version desarrollo completo del proyecto Festival de música con Gulp y SASS.
 
