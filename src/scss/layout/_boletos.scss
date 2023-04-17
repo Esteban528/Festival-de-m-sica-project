@@ -2,17 +2,17 @@
 @use 'base/mixins' as m;
 
 .boletos {
-    padding: 5rem 0;
+    padding: 5rem 0; //Agrega padding a la altura pero no al ancho
 
     h3 {
-        text-align: center;
-        color: v.$blanco;
-        margin-bottom: 2rem;
+        text-align: center; // Alinea el texto en el centro
+        color: v.$blanco; 
+        margin-bottom: 2rem; // Margen inferior
     }
 
     .contenedor-boletos{
-        @include m.tablet {
-            @include m.grid (2, 5rem)
+        @include m.tablet { //Usa un mixin de mediaquery de tamaño
+            @include m.grid (2, 5rem) //Agrega display grid y columnas con un tamaño
         }
     }
 }
@@ -21,29 +21,29 @@
     color: v.$negro;
 
     .nombre-pase {
-        text-align: center;
-        font-size: 2.5rem;
+        text-align: center; // Alinea el texto en el centro
+        font-size: 2.5rem; // Tamaño de la fuente
         color: v.$blanco;
     }
 
-    &-header,
+    &-header, // & = .pase
     &-footer {
-        padding: .5rem;
+        padding: .5rem; // Padding a todos los lados
         p {
             text-align: center;
-            color: v.$blanco;
-            margin: 0;
+            color: v.$blanco; // Color de texto
+            margin: 0; // Quita el margen
         }
     }
 
     &-header {
-        background-color: v.$rosa;
+        background-color: v.$rosa; // Color de fondo
 
         p {
-            text-transform: v.$rosa;
+            color: v.$rosa; 
             p {
-                text-transform: uppercase;
-                font-size: 1.6rem;
+                text-transform: uppercase; // Transforma el texto convirtiendolo a mayuscula
+                font-size: 1.6rem; // Transforma el tamaño de la fuente
             }
         }
     }
@@ -51,20 +51,20 @@
         background-color: v.$blanco;
 
         ul {
-            @include m.resetear-lista;
+            @include m.resetear-lista; // Le quita el tamaño a la 
             li,
-            :nth-child(odd) {
+            :nth-child(odd) { //indica que se está seleccionando todos los elementos hijos que tienen un índice impar.
                 background-color: v.$blanco;
-                padding: 1rem;
-                border-bottom: 1px solid #e1e1e1;
+                padding: 1rem; //Agrega padding a todos los lados
+                border-bottom: 1px solid #e1e1e1; // Agrega borde inferior de 1 pixel
             }
         }
     }
     &-footer {
         background-color: v.$morado;
         p {
-            font-size: 1.4rem;
-            font-weight: 700;
+            font-size: 1.4rem; // Tamaño de la fuente
+            font-weight: 700; // Grosor de la letra normal: 400 bold: 700
         }
     }
 }

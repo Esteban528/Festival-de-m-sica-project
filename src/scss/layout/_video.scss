@@ -1,12 +1,13 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
+// Video
 .video {
-    position: relative;
-    min-height: 50rem;
-    max-height: 70rem;
-    overflow: hidden;
-
+    position: relative; /* Establece la posición "relativa" para el elemento. Esto significa que se posicionará en relación a su posición original, es decir, se moverá con respecto a su posición original. */
+    min-height: 50rem; /* Establece la altura mínima del elemento en 50 "rem". Si el contenido del elemento es menor que esta altura, el elemento se expandirá automáticamente para acomodar el contenido. */
+    max-height: 70rem; /* Establece la altura máxima del elemento en 70 "rem". Si el contenido del elemento supera esta altura, se habilitará la barra de desplazamiento vertical para permitir al usuario desplazarse por el contenido. */
+    overflow: hidden; /* Oculta el contenido que sobrepasa los límites del elemento, es decir, no se mostrará el contenido que está fuera del rango de la altura establecida. */
+    
     .overlay {
         position: absolute;
         background: rgb(127,0,167);

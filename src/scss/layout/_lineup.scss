@@ -2,22 +2,23 @@
 @use 'base/mixins' as m;
 
 .lineup {
-    background-color: v.$rosa;
-    padding: 5rem 0;
+    background-color: v.$rosa; // Fondo rosa
+    padding: 5rem 0; // Padding altura 0 anchura
 
-    h3, p {
+
+    h3, p { //Titulo
         text-align: center;
         color: v.$blanco;
     }
     .dia {
         text-transform: uppercase;
-        margin: 5rem 0;
+        margin: 5rem 0; // Margen 5 altura 0 anchura
     }
 }
 
 .escenarios-contenedor {
-    @include m.tablet {
-        @include m.grid (2, 5rem);
+    @include m.tablet { // Si el tamaño es mayor al de tablet
+        @include m.grid (2, 5rem); // Display grid de 2 columnas y 5 anchura
     }
     p {
         color: v.$negro;
@@ -28,15 +29,15 @@
     padding-top: 2rem;
 
     p {
-        &:after {
+        &:after { //se utiliza para agregar contenido generado por CSS después del contenido del elemento seleccionado
             content: '';
-            display: block;
-            width: 20rem;
-            height: 10rem;
-            background-size: 15rem;
-            background-repeat: no-repeat;
-            background-position: center center;
-            margin: 2rem auto 0 auto;
+            display: block; // Fija el texto en un bloque
+            width: 20rem; // tamaño alto
+            height: 10rem; // tamaño ancho
+            background-size: 15rem; // tamaño del fondo
+            background-repeat: no-repeat; // repetir el fondo: sin repeticion
+            background-position: center center; //ubicar el fondo en el centro
+            margin: 2rem auto 0 auto; // margen top 
         }
     }
 }

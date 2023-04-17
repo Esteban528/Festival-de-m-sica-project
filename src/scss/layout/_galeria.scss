@@ -2,58 +2,58 @@
 @use 'base/mixins' as m;
 
 .galeria {
-    padding: 5rem 0;
+    padding: 5rem 0; //Agrega padding a la altura pero no al ancho
 
     h3 {
         text-align: center;
     }
 }
 
-.galeria-imagenes {
-    @include m.resetear-lista;
-    @include m.grid(2, 2rem);
-    @include m.telefono {
-        @include m.grid(3, 2rem);
+.galeria-imagenes { 
+    @include m.resetear-lista; // Le quita formato a la lista
+    @include m.grid(2, 2rem); // Crea un display grid con 2 columnas de 2 rem
+    @include m.telefono { // Si el tamaño es superior a telefono
+        @include m.grid(3, 2rem); // Convierte el grid en 3 columnas
     }
-    @include m.tablet {
-        @include m.grid(4, 2rem);
+    @include m.tablet { // Si el tamaño es superior al de la tablet
+        @include m.grid(4, 2rem); // Convierte el grid en 4 columnas
     }
-    @include m.desktop {
-        @include m.grid(6, 2rem);
+    @include m.desktop { // Si el tamaño es superior al de la computadora
+        @include m.grid(6, 2rem); // convierte el grid a 4 columnas
     }
 }
 
-.overlay {
-    position: fixed;
+.overlay { // Fondo oscuro cuando seleccionamos una imagen
+    position: fixed; // es una propiedad que se utiliza para establecer la posición de un elemento fijo en la pantalla,
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    width: 100%;
-    height: 100%;
+    width: 100%; // Lo pone del tamaño completo posible
+    height: 100%; // Lo pone del tamaño completo posible
 
-    display: grid;
-    place-items: center; // AFECTA VERTICAL Y HORIZONTALMENTE
+    display: grid; // Establece el Display grid
+    place-items: center; // Centra los items AFECTA VERTICAL Y HORIZONTALMENTE
 
-    background-color: rgba(0 0 0 / .5);
+    background-color: rgba(0 0 0 / .5); // Color / transparencia
 
-    picture {
-        display: block;
-        max-width: 80rem;
+    picture { // La imagen
+        display: block; // Display block para que no le aplique el grid de arriba
+        max-width: 80rem; // Tamaño maximo de 800 pixeles
     }
 }
 
-.btn-cerrar {
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
+.btn-cerrar { //Boton de cerrar
+    width: 4rem; 
+    height: 4rem; 
+    border-radius: 50%; // Redondea el borde en 50% (Circular completo)
     background-color: v.$blanco;
-    color: v.$negro;
-    display: grid;
-    place-items: center;
+    color: v.$negro; 
+    display: grid; 
+    place-items: center; // Pone el item ordenado hacia el centro
     font-weight: 700;
 
-    &:hover {
-        cursor: pointer;
+    &:hover { // Cuando el cursor pasa por encima
+        cursor: pointer;  //Cambia el estilo del cursor
     }
 }

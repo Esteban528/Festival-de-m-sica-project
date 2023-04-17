@@ -2,19 +2,19 @@
 @use 'base/mixins' as m;
 
 .sobre-festival {
-    padding: 5rem 0;
-    @include m.tablet {
-        @include m.grid(2, 5rem);
+    padding: 5rem 0; // 5 padding lados horizontales y sin padding verticales
+    @include m.tablet { // Si el tamaño es superior al de una tablet>
+        @include m.grid(2, 5rem); // Display grid de 2 filas y (5*10)=50px de tamaño
     }
 }
 
 .contenido-festival {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: flex; // Display modo Flex
+    flex-direction: column; // Agrega dirección vertical
+    justify-content: center; // Justifica el contenido en el centro
 
-    margin-top: 5rem;
-    @include m.tablet {
+    margin-top: 5rem; // Margen superior
+    @include m.tablet { // Si el tamaño es superior al de una tablet>
         margin-top:0;
     }
     h2 {
@@ -22,6 +22,6 @@
     }
     .fecha {
         color: v.$rosa;
-        font-weight: 700;
+        font-weight: 700; // Grosor de la letra normal: 400 bold: 700
     }
 }

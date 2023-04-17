@@ -6,10 +6,10 @@
 
     @include m.tablet {
         &.fijo { // Poner header fijo
-            position:fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
+            position:fixed; // No se moverá con el scroll
+            left: 0; // Se posicionara en la posición 0 izquierda
+            top: 0; // Se posicionará en la posicion 0 alta
+            width: 100%; // Abarcará el 100% del width
             box-shadow: .1rem .3rem .3rem #333;
         }
     }
@@ -24,22 +24,22 @@
     .contenido-header {
         padding: 2rem;
         @include m.tablet {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            display: flex; //Diseño flex
+            justify-content: space-between; // Se distribuirá por todo el espacio disponible
+            align-items: center; // Alineará los items al centro
         }
     }
 }
 
 .navegacion-principal {
-    @include m.tablet {
-        display: flex;
-        gap: 2rem;
-        margin-bottom: 0;
+    @include m.tablet { //Si es tamaño es superior al de tablet
+        display: flex; // Diseño flex
+        gap: 2rem; // Separación vertical y horizontal de 2rem
+        margin-bottom: 0; // Margen inferior 0
     }
     a {
-        display: block;
-        text-align: center;
+        display: block; 
+        text-align: center; // Alineación centro
         color: v.$blanco;
         font-size: 2.4rem;
         margin-bottom: 1rem;
